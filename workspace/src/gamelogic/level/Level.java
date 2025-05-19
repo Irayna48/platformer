@@ -239,10 +239,10 @@ public class Level {
 		}
          
 		//if we can’t go down go left and right.
-		else
+		else if  (row+1 < map.getTiles()[0].length && !(map.getTiles()[col][row+1] instanceof Water))
 		 {
 			//right
-		if(col+1 < map.getTiles().length && !(map.getTiles()[col+1][row] instanceof Water) && !map.getTiles()[col+1][row].isSolid() ) 
+		if (col+1 < map.getTiles().length && !(map.getTiles()[col+1][row] instanceof Water) && !map.getTiles()[col+1][row].isSolid() ) 
 		{
 			
     		int full;
